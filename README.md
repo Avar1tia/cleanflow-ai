@@ -8,6 +8,28 @@ It helps collect customer requests, generate AI-style summaries, detect urgency,
 CleanFlow AI is a frontend-only MVP that demonstrates how a modern SaaS workflow can look for service-based businesses.  
 The current version focuses on user experience, lead intake flow, and dashboard usability.
 
+## Screenshots
+
+### Landing Page
+
+![CleanFlow AI landing page](./screenshots/01-hero.png)
+
+### Lead Intake Form
+
+![CleanFlow AI lead intake form](./screenshots/02-lead-form.png)
+
+### Admin Dashboard
+
+![CleanFlow AI admin dashboard](./screenshots/03-dashboard-overview.png)
+
+### Lead Cards
+
+![CleanFlow AI lead cards](./screenshots/04-lead-cards.png)
+
+### Mobile View
+
+![CleanFlow AI mobile dashboard](./screenshots/05-mobile-dashboard.png)
+
 ## 2. Problem
 
 Small cleaning businesses often receive leads from different channels and handle them manually.  
