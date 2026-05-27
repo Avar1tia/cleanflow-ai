@@ -55,9 +55,11 @@ function HeroSection({ onCtaClick }) {
         <div className="grid gap-3 rounded-2xl border border-slate-700/70 bg-slate-900/70 p-3 text-xs text-slate-300 sm:grid-cols-3">
           <div className="rounded-xl border border-slate-700/80 bg-slate-950/60 px-3 py-2">
             <p className="text-[11px] uppercase tracking-[0.14em] text-slate-500">
-              Avg reply speed
+              Response time
             </p>
-            <p className="mt-1 text-sm font-semibold text-slate-100">-38%</p>
+            <p className="mt-1 text-sm font-semibold text-slate-100">
+              38% faster
+            </p>
           </div>
           <div className="rounded-xl border border-slate-700/80 bg-slate-950/60 px-3 py-2">
             <p className="text-[11px] uppercase tracking-[0.14em] text-slate-500">
@@ -67,9 +69,9 @@ function HeroSection({ onCtaClick }) {
           </div>
           <div className="rounded-xl border border-slate-700/80 bg-slate-950/60 px-3 py-2">
             <p className="text-[11px] uppercase tracking-[0.14em] text-slate-500">
-              Missed opportunities
+              Missed leads
             </p>
-            <p className="mt-1 text-sm font-semibold text-slate-100">Near zero</p>
+            <p className="mt-1 text-sm font-semibold text-slate-100">Reduced</p>
           </div>
         </div>
       </div>

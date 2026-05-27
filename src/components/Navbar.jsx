@@ -7,8 +7,11 @@ function Navbar({ currentView, onChangeView }) {
             <span className="text-xs font-semibold text-emerald-300">CF</span>
           </div>
           <div className="flex flex-col">
-            <span className="text-sm font-semibold tracking-tight text-slate-50">
-              CleanFlow AI
+            <span className="flex items-center gap-1.5 text-sm font-semibold tracking-tight text-slate-50">
+              <span>CleanFlow</span>
+              <span className="inline-flex items-center rounded-md bg-gradient-to-r from-emerald-400 to-teal-300 px-1.5 py-0.5 text-[10px] font-bold uppercase leading-none text-slate-950 ring-1 ring-emerald-200/60">
+                AI
+              </span>
             </span>
             <span className="text-[11px] text-slate-500">
               Lead assistant for cleaners

@@ -14,7 +14,13 @@ function AdminDashboard({ leads, onUpdateStatus }) {
               Pipeline overview
             </p>
             <h1 className="mt-2 text-2xl font-semibold tracking-tight text-slate-50 md:text-3xl">
-              CleanFlow AI lead dashboard
+              <span className="inline-flex items-center gap-1.5 align-middle">
+                <span>CleanFlow</span>
+                <span className="inline-flex items-center rounded-md bg-gradient-to-r from-emerald-400 to-teal-300 px-1.5 py-0.5 text-[10px] font-bold uppercase leading-none text-slate-950 ring-1 ring-emerald-200/60">
+                  AI
+                </span>
+              </span>{' '}
+              lead dashboard
             </h1>
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate-300">
               Review incoming requests with AI summaries, urgency signals, and a

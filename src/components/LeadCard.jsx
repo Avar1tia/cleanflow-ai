@@ -70,6 +70,16 @@ function UrgencyPill({ urgency }) {
 }
 
 function LeadCard({ lead, onUpdateStatus }) {
+  const createdAtDate = lead.createdAt ? new Date(lead.createdAt) : null
+  const isToday =
+    createdAtDate &&
+    createdAtDate.toDateString() === new Date().toDateString()
+  const createdAtLabel = isToday
+    ? 'Received today'
+    : createdAtDate
+      ? `Received ${createdAtDate.toLocaleDateString()}`
+      : 'Received recently'
+
   return (
     <article className="flex h-full flex-col gap-4 rounded-2xl border border-slate-800/90 bg-gradient-to-b from-slate-900/90 to-slate-950/90 p-5 shadow-lg shadow-slate-950/50">
       <div className="flex flex-wrap items-start justify-between gap-3">
@@ -81,6 +91,7 @@ function LeadCard({ lead, onUpdateStatus }) {
             {lead.cleaningType || 'Cleaning request'} ·{' '}
             {lead.propertySize || 'Property size not specified'}
           </p>
+          <p className="mt-1 text-[11px] text-slate-500">{createdAtLabel}</p>
         </div>
         <div className="flex flex-col items-end gap-1">
           <StatusPill status={lead.status} />
@@ -88,7 +99,7 @@ function LeadCard({ lead, onUpdateStatus }) {
         </div>
       </div>
 
-      <div className="grid gap-2 rounded-xl border border-slate-800/70 bg-slate-950/60 p-3 text-xs text-slate-300 sm:grid-cols-2">
+      <div className="grid gap-3 rounded-xl border border-slate-800/70 bg-slate-950/60 p-3.5 text-xs text-slate-300 sm:grid-cols-2">
         <p className="leading-relaxed">
           <span className="text-slate-500">Preferred date:</span>{' '}
           {lead.preferredDate || 'Flexible'}
@@ -105,14 +116,14 @@ function LeadCard({ lead, onUpdateStatus }) {
         <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-300">
           AI summary
         </p>
-        <p className="text-xs leading-relaxed text-slate-100">{lead.summary}</p>
+        <p className="text-sm leading-relaxed text-slate-100">{lead.summary}</p>
       </div>
 
       <div className="space-y-1.5 rounded-xl border border-slate-800/70 bg-slate-950/60 p-3">
         <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-400">
           Original message
         </p>
-        <p className="text-xs leading-relaxed text-slate-300">
+        <p className="text-sm leading-relaxed text-slate-300">
           {lead.message || 'No additional notes from customer.'}
         </p>
       </div>

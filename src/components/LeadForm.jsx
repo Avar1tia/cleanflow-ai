@@ -42,6 +42,19 @@ const initialFormState = {
   message: '',
 }
 
+const demoFormState = {
+  fullName: 'Olivia Turner',
+  email: 'olivia.turner@example.com',
+  phone: '+1 (555) 347-1892',
+  cleaningType: 'Move-in / move-out',
+  propertySize: '3 bed townhouse',
+  preferredDate: new Date(Date.now() + 4 * 24 * 60 * 60 * 1000)
+    .toISOString()
+    .slice(0, 10),
+  message:
+    'Need a move-out clean before final inspection this week. Kitchen and bathrooms need extra attention, and we have one small dog.',
+}
+
 function LeadForm({ onAddLead }) {
   const [form, setForm] = useState(initialFormState)
   const inputClassName =
@@ -85,6 +98,10 @@ function LeadForm({ onAddLead }) {
 
     onAddLead(newLead)
     setForm(initialFormState)
+  }
+
+  const handleFillDemoData = () => {
+    setForm(demoFormState)
   }
 
   return (
@@ -230,12 +247,21 @@ function LeadForm({ onAddLead }) {
         <p className="text-xs text-slate-500">
           Submitting creates a local demo lead with AI summary and urgency.
         </p>
-        <button
-          type="submit"
-          className="inline-flex w-full items-center justify-center rounded-xl bg-emerald-400 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/40 transition hover:bg-emerald-300 md:w-auto"
-        >
-          Add demo lead to dashboard
-        </button>
+        <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row">
+          <button
+            type="button"
+            onClick={handleFillDemoData}
+            className="inline-flex w-full items-center justify-center rounded-xl border border-slate-600 bg-slate-900 px-4 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-slate-500 hover:bg-slate-800 sm:w-auto"
+          >
+            Fill demo data
+          </button>
+          <button
+            type="submit"
+            className="inline-flex w-full items-center justify-center rounded-xl bg-emerald-400 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/40 transition hover:bg-emerald-300 sm:w-auto"
+          >
+            Add demo lead to dashboard
+          </button>
+        </div>
       </div>
     </form>
   )

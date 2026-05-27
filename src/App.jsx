@@ -128,7 +128,14 @@ function App() {
                   Capture a new cleaning lead
                 </p>
                 <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-50 md:text-3xl">
-                  Test the CleanFlow AI intake flow
+                  Test the{' '}
+                  <span className="inline-flex items-center gap-1.5 align-middle">
+                    <span>CleanFlow</span>
+                    <span className="inline-flex items-center rounded-md bg-gradient-to-r from-emerald-400 to-teal-300 px-1.5 py-0.5 text-[10px] font-bold uppercase leading-none text-slate-950 ring-1 ring-emerald-200/60">
+                      AI
+                    </span>
+                  </span>{' '}
+                  intake flow
                 </h2>
                 <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-400">
                   Submit a fake request and watch it appear in the dashboard as
