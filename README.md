@@ -79,3 +79,6 @@ npm run dev
 ```
 
 Then open the local Vite URL shown in the terminal (usually `http://localhost:5173`).
+
+## Live Demo
+https://твоя-ссылка.vercel.app
